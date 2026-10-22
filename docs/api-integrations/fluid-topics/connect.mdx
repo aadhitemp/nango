@@ -1,0 +1,54 @@
+---
+title: 'Fluid Topics - How do I connect my account?'
+sidebarTitle: 'Fluid Topics'
+description: 'Find your Fluid Topics portal domain, generate an API key, and connect it to Nango'
+---
+
+## Overview
+
+To authenticate with Fluid Topics, you need:
+1. **Portal Domain** - The domain of your Fluid Topics portal (e.g. `docs.example.com`).
+2. **API Key** - An API key generated in your Fluid Topics portal.
+
+This guide walks you through finding your portal domain, generating an API key, and connecting it to Nango.
+
+### Prerequisites
+
+- A Fluid Topics portal and a user with the **ADMIN** role. Only ADMIN users can generate API keys; if you don't have this role, ask an administrator to create a key for you.
+
+### Instructions
+
+#### Step 1: Find your portal domain
+
+Your portal domain is the hostname visible in your browser when you open your Fluid Topics portal. For example, if your browser shows:
+
+```
+https://docs.example.com/home
+```
+
+Your portal domain is **`docs.example.com`**.
+
+#### Step 2: Generate an API key
+
+1. Sign in to your Fluid Topics portal as an ADMIN user.
+2. Open the **Administration** menu and go to **Integrations** > **API keys**.
+3. Select **New API key**.
+4. Enter a **Name** for the integration (e.g. `nango`). Only alphanumeric characters, dashes, and underscores are allowed.
+5. Optionally, add a **Description**.
+6. In the **Roles** section, select the roles the key needs. In **Access groups**, add the key to any groups needed to read restricted content.
+7. Optionally, restrict the key to specific IP addresses or ranges. Leave the field empty to allow all IPs.
+8. Select **Save**, then select **Copy** in the pop-up to copy the key.
+
+<Tip>Fluid Topics only shows the API key once, when it is created. Copy it and store it securely. If you lose it, generate a new one.</Tip>
+
+#### Step 3: Enter credentials in the Connect UI
+
+Once you have your portal domain and API key:
+
+1. Open the form where you need to authenticate with Fluid Topics.
+2. Enter your **Portal Domain** and **API Key** in their respective fields.
+3. Submit the form, and you should be successfully authenticated.
+
+You are now connected to Fluid Topics.
+
+For more details, see the Fluid Topics [API keys documentation](https://docs.fluidtopics.com/r/Fluid-Topics-Configuration-and-Administration-Guide/Configure-a-Fluid-Topics-tenant/Integrations/API-keys).

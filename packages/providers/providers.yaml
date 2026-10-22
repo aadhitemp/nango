@@ -9644,6 +9644,37 @@ float:
             description: The details of your app
             automated: true
 
+fluid-topics:
+    display_name: Fluid Topics
+    categories:
+        - knowledge-base
+        - search
+    auth_mode: API_KEY
+    proxy:
+        base_url: https://${connectionConfig.domain}
+        headers:
+            authorization: Bearer ${apiKey}
+    docs: https://nango.dev/docs/api-integrations/fluid-topics
+    docs_connect: https://nango.dev/docs/api-integrations/fluid-topics/connect
+    connection_config:
+        domain:
+            type: string
+            title: Portal Domain
+            description: The domain of your Fluid Topics portal.
+            example: docs.example.com
+            format: hostname
+            prefix: https://
+            order: 1
+            doc_section: '#step-1-find-your-portal-domain'
+    credentials:
+        apiKey:
+            type: string
+            title: API Key
+            description: The API key generated in your Fluid Topics portal.
+            example: QWxhZGRpbjpv********************
+            pattern: '^[A-Za-z0-9+/=_-]+$'
+            doc_section: '#step-2-generate-an-api-key'
+
 folk:
     display_name: Folk
     categories:
